@@ -41,7 +41,11 @@ public class Login_StepDefs {
     @Then("The user verifies {string} message")
     public void the_user_verifies_message(String message) {
         homePage.invalidLoginWarningMessage(message);
+    }
 
+    @Then("The user verifies invalid access message {string}")
+    public void the_user_verifies_invalid_access_message(String expectedMessage) {
+        loginPage.verifyWrongCredentialsPopUpMessage(expectedMessage);
 
     }
 
